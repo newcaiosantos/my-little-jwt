@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  my-little-jwt:
+    build: ./
+    container_name: my-little-jwt
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - my-little-jwt-network
+networks:
+  my-little-jwt-network:
+    external: true
